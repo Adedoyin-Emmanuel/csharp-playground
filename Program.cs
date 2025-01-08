@@ -52,13 +52,28 @@
             throw new Exception("Invalid index!");
         }
 
-        
-        
+        for (int i = index; i < _size - 1; i++)
+        {
+            _items[i] = _items[i + 1];
+        }
+
+        _size --;
+
     }
 
-    public int IndexOf(int item)
+    public int IndexOf(int value)
     {
-        return -1;
+        int foundElement = -1;
+
+        for (int i = 0; i < _size - 1; i++)
+        {
+            if(_items[i] == value)
+            {
+                return _items[i];
+            }
+        }
+
+        return foundElement;
     }
     
 }
