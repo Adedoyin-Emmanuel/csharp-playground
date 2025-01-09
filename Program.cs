@@ -16,9 +16,16 @@ class Program
         numbers.Insert(4);
 
 
-        var reversedArray = numbers.Reverse();
+        numbers.InsertAt(28, 0);
+        numbers.InsertAt(42, 2);
+        numbers.InsertAt(50, 0);
 
-        reversedArray.Print();
+        numbers.Print();
+
+        // var reversedArray = numbers.Reverse();
+
+        //reversedArray.Print();
+
 
 
         //int[] numbers2 = new int[4] { 4, 5, 6, 8 };

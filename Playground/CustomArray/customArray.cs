@@ -126,6 +126,39 @@ class CustomArray
     }
 
 
+    public void InsertAt(int item, int index)
+    {
+        if(index < 0 || index > _size)
+        {
+            throw new ArgumentOutOfRangeException("Index must not be less than 0!");
+        }
+
+        if(_size >= _capacity)
+        {
+            _capacity *= 2;
+
+            int[] newArray = new int[_capacity];
+
+            for (int i = 0; i < _size; i++)
+            {
+                newArray[i] = _items[i];
+            }
+
+            _items = newArray;
+        }
+
+
+        for (int i = _size - 1; i >= index; i--)
+        {
+            _items[i + 1] = _items[i];
+        }
+
+        _items[index] = item;
+        _size++;
+
+    }
+
+
     public int Count() 
     {
         return _size;
