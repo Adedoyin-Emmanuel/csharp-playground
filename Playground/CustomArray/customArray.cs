@@ -79,6 +79,22 @@ class CustomArray
         return -1;
     }
 
+    public int Max()
+    {
+
+        int highestNumber = 0;
+
+        for (int i = 0; i < _size; i++)
+        {
+            if(_items[i] > highestNumber)
+            {
+                highestNumber = _items[i];
+            }
+        }
+
+        return highestNumber;
+    }
+
 
     public int Count() 
     {
@@ -100,4 +116,6 @@ class CustomArray
         }
         
     }
+
+    
 }
