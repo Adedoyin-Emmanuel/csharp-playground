@@ -14,9 +14,13 @@ class Program
         numbers.Insert(3);
 
         numbers.RemoveAt(2);
-       
 
-        System.Console.WriteLine(numbers.IndexOf(3));
+        numbers.Insert(4);
+
+        numbers.Insert(100);
+
+        System.Console.WriteLine(numbers.Max());
+
 
 
         var names = new GenericArray<string>();
@@ -54,6 +58,9 @@ class Program
 
 
         nums.Print();
+
+
+
 
     }
 }
