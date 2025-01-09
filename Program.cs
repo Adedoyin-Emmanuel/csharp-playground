@@ -47,9 +47,13 @@ class Program
 
 
 
+        var nums = new GenericArray<int>();
+
+        nums.Insert(2);
+        nums.Insert(4);
 
 
-
+        nums.Print();
 
     }
 }
