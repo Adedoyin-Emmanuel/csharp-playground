@@ -95,6 +95,24 @@ class CustomArray
         return highestNumber;
     }
 
+    public CustomArray Intersect(int[] array)
+    {
+        var intersectArray = new CustomArray();
+
+        for (int i = 0; i < _size; i++)
+        {
+            for (int j = 0; j < array.Count(); j++)
+            {
+                if(_items[i].Equals(array[j]))
+                {
+                    intersectArray.Insert(_items[i]);
+                }
+            }
+        }
+
+        return intersectArray;
+    }
+
 
     public int Count() 
     {
