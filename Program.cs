@@ -13,14 +13,21 @@ class Program
         numbers.Insert(1);
         numbers.Insert(2);
         numbers.Insert(3);
-        numbers.Insert(8);
+        numbers.Insert(4);
 
 
-        int[] numbers2 = new int[4] { 4, 5, 6, 8 };
+        var reversedArray = numbers.Reverse();
 
-        var results = numbers.Intersect(numbers2);
+        reversedArray.Print();
 
-        results.Print();
+
+        //int[] numbers2 = new int[4] { 4, 5, 6, 8 };
+
+        //var results = numbers.Intersect(numbers2);
+
+        //results.Print();
+
+
 
         //numbers.RemoveAt(2);
 
