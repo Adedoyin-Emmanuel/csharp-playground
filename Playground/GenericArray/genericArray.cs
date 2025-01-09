@@ -59,6 +59,7 @@ class GenericArray<T>
             _items[i] = _items[i + 1];
         }
 
+        _items[_size - 1] = default!;
         _size--;
     }
 
@@ -84,9 +85,9 @@ class GenericArray<T>
 
     public void Print()
     {
-        foreach(T item in _items)
+        for (int i = 0; i < _size; i++)
         {
-            System.Console.WriteLine(item);
+            System.Console.WriteLine(_items[i]);
         }
     }
 
